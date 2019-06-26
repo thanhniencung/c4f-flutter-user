@@ -6,7 +6,7 @@ class SignInView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.orange,
+      backgroundColor: Colors.orange[300],
       body: MultiProvider(
         providers: [
           ChangeNotifierProvider(builder: (context) => SignInViewModel()),
@@ -29,15 +29,90 @@ class _SignInWidgetState extends State<SignInWidget> {
 
     return Center(
       child: Container(
+        margin: EdgeInsets.all(15),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            TxtCounter(),
-            RaisedButton(
-              onPressed: () {
-                viewmodel.increment();
-              },
-              child: Text("Click me"),
+            Image.asset(
+              'assets/images/logo.png',
+              width: 120,
+              height: 120,
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            SizedBox(
+              height: 300,
+              child: Card(
+                elevation: 2.0,
+                color: Colors.white,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(4)),
+                child: Form(
+                    child: Container(
+                  margin: EdgeInsets.all(20),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: <Widget>[
+                      TextFormField(
+                        style: TextStyle(fontSize: 20),
+                        keyboardType: TextInputType.phone,
+                        decoration: InputDecoration(
+                            labelText: "Phone Number",
+                            icon: Icon(Icons.phone),
+                            enabledBorder: UnderlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: Colors.grey[200])),
+                            disabledBorder: UnderlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: Colors.grey[200]))),
+                      ),
+                      TextFormField(
+                        style: TextStyle(fontSize: 20),
+                        obscureText: true,
+                        decoration: InputDecoration(
+                            labelText: "Password",
+                            icon: Icon(Icons.lock),
+                            enabledBorder: UnderlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: Colors.grey[200])),
+                            disabledBorder: UnderlineInputBorder(
+                                borderSide:
+                                    BorderSide(color: Colors.grey[200]))),
+                      ),
+                      SizedBox(
+                        height: 15,
+                      ),
+                      RaisedButton(
+                          onPressed: () {},
+                          color: Colors.orange[600],
+                          shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(4)),
+                          child: SizedBox(
+                            width: 250,
+                            height: 50,
+                            child: Center(
+                              child: Text(
+                                "Sign In",
+                                style: TextStyle(
+                                    fontSize: 17, color: Colors.white),
+                              ),
+                            ),
+                          )),
+                    ],
+                  ),
+                )),
+              ),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            Text(
+              "Sign up now",
+              style: TextStyle(
+                  fontSize: 19,
+                  decoration: TextDecoration.underline,
+                  fontWeight: FontWeight.bold),
             )
           ],
         ),

@@ -13,7 +13,9 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       initialRoute: '/',
-      routes: <String, WidgetBuilder>{'/': (context) => SignInView()},
+      routes: <String, WidgetBuilder>{
+        '/': (context) => SignInView(),
+      },
     );
   }
 }

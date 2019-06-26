@@ -28,22 +28,21 @@ class _SignInWidgetState extends State<SignInWidget> {
     var viewmodel = SignInViewModel.of(context);
 
     return Center(
-      child: Container(
-        margin: EdgeInsets.all(15),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            Image.asset(
-              'assets/images/logo.png',
-              width: 120,
-              height: 120,
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            SizedBox(
-              height: 300,
-              child: Card(
+      child: SingleChildScrollView(
+        child: Container(
+          margin: EdgeInsets.all(15),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Image.asset(
+                'assets/images/logo.png',
+                width: 120,
+                height: 120,
+              ),
+              SizedBox(
+                height: 20,
+              ),
+              Card(
                 elevation: 2.0,
                 color: Colors.white,
                 shape: RoundedRectangleBorder(
@@ -67,6 +66,9 @@ class _SignInWidgetState extends State<SignInWidget> {
                                 borderSide:
                                     BorderSide(color: Colors.grey[200]))),
                       ),
+                      SizedBox(
+                        height: 15,
+                      ),
                       TextFormField(
                         style: TextStyle(fontSize: 20),
                         obscureText: true,
@@ -81,7 +83,7 @@ class _SignInWidgetState extends State<SignInWidget> {
                                     BorderSide(color: Colors.grey[200]))),
                       ),
                       SizedBox(
-                        height: 15,
+                        height: 20,
                       ),
                       RaisedButton(
                           onPressed: () {},
@@ -103,18 +105,18 @@ class _SignInWidgetState extends State<SignInWidget> {
                   ),
                 )),
               ),
-            ),
-            SizedBox(
-              height: 20,
-            ),
-            Text(
-              "Sign up now",
-              style: TextStyle(
-                  fontSize: 19,
-                  decoration: TextDecoration.underline,
-                  fontWeight: FontWeight.bold),
-            )
-          ],
+              SizedBox(
+                height: 20,
+              ),
+              Text(
+                "Sign up now",
+                style: TextStyle(
+                    fontSize: 19,
+                    decoration: TextDecoration.underline,
+                    fontWeight: FontWeight.bold),
+              )
+            ],
+          ),
         ),
       ),
     );

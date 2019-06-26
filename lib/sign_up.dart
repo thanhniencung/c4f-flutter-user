@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'sign_in_viewmodel.dart';
 
-class SignInView extends StatelessWidget {
+class SignUpView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        title: Text("Sign up"),
+      ),
       backgroundColor: Colors.orange[300],
       body: MultiProvider(
         providers: [
@@ -108,17 +111,12 @@ class _SignInWidgetState extends State<SignInWidget> {
               SizedBox(
                 height: 20,
               ),
-              GestureDetector(
-                onTap: () {
-                  Navigator.of(context).pushNamed("/sign-up");
-                },
-                child: Text(
-                  "Sign up now",
-                  style: TextStyle(
-                      fontSize: 19,
-                      decoration: TextDecoration.underline,
-                      fontWeight: FontWeight.bold),
-                ),
+              Text(
+                "Sign up now",
+                style: TextStyle(
+                    fontSize: 19,
+                    decoration: TextDecoration.underline,
+                    fontWeight: FontWeight.bold),
               )
             ],
           ),

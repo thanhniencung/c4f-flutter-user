@@ -22,8 +22,13 @@ dependencies:
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
+  flutter_native_image:
+    git: https://github.com/btastic/flutter_native_image.git
   cupertino_icons: ^0.1.2
   provider: ^3.0.0+1
+  dio: 2.1.7
+  progress_dialog: ^1.1.0+1
+  image_picker:
 
 dev_dependencies:
   flutter_test:

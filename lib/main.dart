@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'sign_in.dart';
-import 'sign_up.dart';
+import 'package:flutter_app_c4f_user_app/account/sign-in/sign_in.dart';
+import 'package:flutter_app_c4f_user_app/account/sign-up/sign_up.dart';
 
 void main() => runApp(MyApp());
 

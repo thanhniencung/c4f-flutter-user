@@ -25,4 +25,13 @@ class UserData {
       token: json['token'],
     );
   }
+
+  Map<String, dynamic> toJson() {
+    return <String, dynamic>{
+      'displayName': displayName,
+      'avatar': avatar,
+      'phone': phone,
+      'token': token,
+    };
+  }
 }

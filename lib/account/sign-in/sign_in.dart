@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_c4f_user_app/model/rest_error.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter_app_c4f_user_app/account/sign-in/sign_in_viewmodel.dart';
 import 'package:flutter_app_c4f_user_app/shared/app_style.dart';
 import 'package:progress_dialog/progress_dialog.dart';
+import 'package:flutter_app_c4f_user_app/cache/cache_manager.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SignInView extends StatelessWidget {
   @override
@@ -103,10 +106,27 @@ class _SignInWidgetState extends State<SignInWidget> {
                                     loading.setMessage("Loading");
                                     loading.show();
 
-                                    Future.delayed(Duration(seconds: 3), () {
+                                    Future.delayed(Duration(seconds: 2),
+                                        () async {
                                       loading.hide();
-                                      Navigator.pushNamed(context, "/sign-up");
+
+                                      Navigator.pushReplacementNamed(
+                                          context, "/home");
                                     });
+                                  }).catchError((restError) {
+                                    RestError error = restError;
+
+                                    Scaffold.of(context).showSnackBar(SnackBar(
+                                        backgroundColor: Colors.red,
+                                        content: Text(
+                                          error.message,
+                                          style: TextStyle(
+                                              color: Colors.white,
+                                              fontWeight: FontWeight.bold,
+                                              fontSize: 17),
+                                        )));
+
+                                    print(error.message);
                                   });
                                 }
                               },

@@ -5,4 +5,7 @@ class EndPoint {
 
   /*********** UPLOAD-SERVICE ***********/
   static const String UPLOAD = "http://localhost:3002/upload";
+
+  /*********** PRODUCT-SERVICE ***********/
+  static const String LIST_PRODUCT = "http://localhost:3001/product/list";
 }

@@ -1,11 +1,12 @@
 import 'dart:io';
+
 import 'package:flutter/material.dart';
-import 'package:progress_dialog/progress_dialog.dart';
-import 'package:provider/provider.dart';
 import 'package:flutter_app_c4f_user_app/account/sign-up/signup_viewmodel.dart';
 import 'package:flutter_app_c4f_user_app/shared/app_color.dart';
-import 'package:image_picker/image_picker.dart';
 import 'package:flutter_native_image/flutter_native_image.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:progress_dialog/progress_dialog.dart';
+import 'package:provider/provider.dart';
 
 class SignUpView extends StatelessWidget {
   @override

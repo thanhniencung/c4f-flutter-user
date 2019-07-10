@@ -3,6 +3,7 @@ import 'package:flutter_app_c4f_user_app/account/sign-in/sign_in.dart';
 import 'package:flutter_app_c4f_user_app/account/sign-up/sign_up.dart';
 import 'package:flutter_app_c4f_user_app/home/home.dart';
 import 'package:flutter_app_c4f_user_app/splash.dart';
+import 'package:flutter_app_c4f_user_app/spcart/spcart_view.dart';
 
 void main() => runApp(MyApp());
 
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         '/sign-up': (context) => SignUpView(),
         '/sign-in': (context) => SignInView(),
         '/home': (context) => HomeView(),
+        '/shopping-cart': (context) => ShoppingCardView(),
       },
     );
   }

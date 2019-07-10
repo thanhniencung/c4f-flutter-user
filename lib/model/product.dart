@@ -28,4 +28,11 @@ class Product {
         productImage: json['productImage'],
         price: double.tryParse(json['price'].toString()) ?? 0);
   }
+
+  Map<String, dynamic> toJson() => {
+        'productId': productId,
+        'productName': productName,
+        'productImage': productImage,
+        'price': price,
+      };
 }

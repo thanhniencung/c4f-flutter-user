@@ -12,7 +12,7 @@ class ChapiAPI {
         receiveTimeout: receiveTimeout);
     Dio dio = new Dio(options);
 
-    //dio.interceptors.add(LogInterceptor(responseBody: true));
+    dio.interceptors.add(LogInterceptor(responseBody: true));
     dio.interceptors
         .add(InterceptorsWrapper(onRequest: (Options myOption) async {
       var preferences = await SharedPreferences.getInstance();
@@ -27,8 +27,5 @@ class ChapiAPI {
       return myOption;
     }));
     return dio;
-
-    // man hinh 1 : api1 => header.add(token)
-    // man hinh 2 : api2 => header.add(token)
   }
 }

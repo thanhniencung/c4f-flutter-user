@@ -1,13 +1,13 @@
 import 'dart:async';
-import 'package:provider/provider.dart';
+
+import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app_c4f_user_app/network/chapi_api.dart';
-import 'package:flutter_app_c4f_user_app/network/endpoint.dart';
 import 'package:flutter_app_c4f_user_app/account/model/user.dart';
 import 'package:flutter_app_c4f_user_app/model/rest_error.dart';
-import 'package:dio/dio.dart';
+import 'package:flutter_app_c4f_user_app/network/chapi_api.dart';
+import 'package:flutter_app_c4f_user_app/network/endpoint.dart';
+import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:flutter_app_c4f_user_app/cache/cache_manager.dart';
 
 class SignInViewModel with ChangeNotifier {
   String _phone;

@@ -1,14 +1,14 @@
 import 'dart:async';
 import 'dart:io';
-import 'package:path/path.dart';
+
 import 'package:dio/dio.dart';
 import 'package:flutter/widgets.dart';
-import 'package:provider/provider.dart';
+import 'package:flutter_app_c4f_user_app/account/model/upload_image.dart';
+import 'package:flutter_app_c4f_user_app/account/model/user.dart';
 import 'package:flutter_app_c4f_user_app/network/chapi_api.dart';
 import 'package:flutter_app_c4f_user_app/network/endpoint.dart';
-import 'package:flutter_app_c4f_user_app/account/model/user.dart';
-import 'package:flutter_app_c4f_user_app/model/rest_error.dart';
-import 'package:flutter_app_c4f_user_app/account/model/upload_image.dart';
+import 'package:path/path.dart';
+import 'package:provider/provider.dart';
 
 class SignUpViewModel extends ChangeNotifier {
   String _image;

@@ -1,19 +1,13 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:flutter_app_c4f_user_app/model/rest_error.dart';
-import 'package:provider/provider.dart';
-import 'package:flutter_app_c4f_user_app/account/sign-in/sign_in_viewmodel.dart';
-import 'package:flutter_app_c4f_user_app/shared/app_style.dart';
-import 'package:progress_dialog/progress_dialog.dart';
-import 'package:flutter_app_c4f_user_app/cache/cache_manager.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SplashView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.red,
+      backgroundColor: Colors.orange[300],
       body: SplashWidget(),
     );
   }

@@ -1,5 +1,8 @@
 import 'package:shared_preferences/shared_preferences.dart';
+
 import 'icache.dart';
+
+// https://gist.github.com/thanhniencung/e64515f3a564f9fce0f740237784a0a0
 
 class CacheManager implements ICache {
   SharedPreferences prefs;
